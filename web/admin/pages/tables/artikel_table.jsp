@@ -56,6 +56,7 @@
                                             <th>Judul</th>
                                             <th>Poster</th>
                                             <th>Artikel</th>
+                                            <th>Tanggal Kegiatan</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>
@@ -76,6 +77,7 @@
                                             <td><%=data.get(x).getJudul()%></td>
                                             <td><%=data.get(x).getLink_img()%></td>
                                             <td><%=data.get(x).getKonten()%></td>
+                                            <td><%=data.get(x).getTgl_kegiatan()%></td>
                                             <td>
                                                 <a href="../../../ArtikelController?proses=edit-artikel&id_artikel=<%=data.get(x).getId_artikel()%>">Edit</a> 
                                             </td>
@@ -92,6 +94,7 @@
                                             <th>Judul</th>
                                             <th>Poster</th>
                                             <th>Artikel</th>
+                                            <th>Tanggal Kegiatan</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>

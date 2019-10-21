@@ -74,7 +74,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/forms/tambah_artikel.jsp" class="nav-link">
+                                    <a href="pages/forms/artikel_form.jsp?proses=tambah" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tambah Konten Poster</p>
                                     </a>
