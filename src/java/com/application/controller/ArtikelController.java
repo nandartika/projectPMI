@@ -98,6 +98,7 @@ public class ArtikelController extends HttpServlet {
                 am.setLink_img(request.getParameter("link_img"));
                 am.setJudul(request.getParameter("judul"));
                 am.setKonten(request.getParameter("konten"));
+                am.setKonten(request.getParameter("tgl_kegiatan"));
 
                 if (proses.equals("input-artikel")) {
                     am.simpan();
