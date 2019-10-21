@@ -62,9 +62,24 @@
                                     <label for="exampleInputFile">Poster</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="imgInp" name="link_img" required>
+                                            <input type="file" class="custom-file-input" id="imgInp" accept="image/*" name="link_img" required>
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                             <img class="" id="blah" src="#" alt="your image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Tanggal Kegiatan</label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                                            </div>
+                                            <!-- /.input group -->
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +125,7 @@
                                     <label for="exampleInputFile">Poster</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="imgInp">
+                                            <input type="file" class="custom-file-input" accept="image/*" id="imgInp">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                             <img class="" id="blah" src="../../images/<%=data.get(0).getLink_img()%>" alt="your image" />
                                         </div>
