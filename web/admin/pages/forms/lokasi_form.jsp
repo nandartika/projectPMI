@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <label>Provinsi</label>
                                     <select class="form-control select2" style="width: 100%;">
-                                        <option disabled selected>Pilih Provinsi</option>
+                                        <option disabled selected >Pilih Provinsi</option>
                                         <option>Alaska</option>
                                         <option>California</option>
                                         <option>Delaware</option>

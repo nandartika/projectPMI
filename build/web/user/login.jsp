@@ -39,6 +39,4 @@
 <jsp:include page="footer.jsp" />
 
 <!-- loader -->
-<jsp:include page="loader.jsp" />
-
--J-Dfile.encoding=UTF-8 
+<jsp:include page="loader.jsp" /> 
