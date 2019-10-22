@@ -8,29 +8,18 @@
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
-        <jsp:include page="../../navbar.jsp" />
+        <jsp:include page="navbar.jsp" />
 
         <!-- Main Sidebar Container -->
-        <jsp:include page="../../aside.jsp" />
+        <jsp:include page="aside.jsp" />
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Artikel Form</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="../../">Home</a></li>
-                                <li class="breadcrumb-item active">Artikel Form</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div><!-- /.container-fluid -->
-            </section>
+
+            <!-- breadcrumbs -->
+            <jsp:include page="contentHeader.jsp" >
+                <jsp:param name="halaman" value="Artikel" />
+            </jsp:include>
 
             <!-- Main content -->
             <section class="content">
@@ -47,30 +36,30 @@
                         </div>
 
                         <%
-                            String proses = request.getParameter("proses");
-                            if (proses.equals("tambah")) {
+                        String proses = request.getParameter("proses");
+                        if (proses.equals("tambah")) {
                         %>
                         <!-- /.card-header -->
                         <form role="form" action="../../../ArtikelController?data=artikel&proses=input-artikel" method="POST">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Judul</label>
+                                    <label>Judul</label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul" name="judul" required>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Poster</label>
+                                    <label>Poster</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="imgInp" accept="image/*" name="link_img" required>
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                            <img class="" id="blah" src="#" alt="your image" />
+                                            <label class="custom-file-label">Choose file</label>
                                         </div>
                                     </div>
                                 </div>
+                                <img class="" id="blah" src="#" style="height: 500px;"/><br><br>
                                 <!-- /.form-group -->
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Tanggal Kegiatan</label>
+                                    <label>Tanggal Kegiatan</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <div class="input-group">
@@ -101,37 +90,37 @@
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary" value="Tambah">Submit</button>
                             </div>
-                            
+
                         </form>
                         <!-- /.card -->
                         <%
-                            }
-                            else if (proses.equals("edit")) {
-                                String id = request.getParameter("id_artikel");
-                                ArtikelModel km = new ArtikelModel();
-                                km.setId_artikel(id);
-                                List<ArtikelModel> data = new ArrayList<ArtikelModel>();
-                                data = km.cariID();
-                                if (data.size() > 0) {
+                        }
+                        else if (proses.equals("edit")) {
+                            String id = request.getParameter("id_artikel");
+                            ArtikelModel km = new ArtikelModel();
+                            km.setId_artikel(id);
+                            List<ArtikelModel> data = new ArrayList<ArtikelModel>();
+                            data = km.cariID();
+                            if (data.size() > 0) {
                         %>
                         <!-- /.card-header -->
                         <form role="form" action="../../../ArtikelController?data=artikel&proses=update-artikel" method="POST">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Judul</label>
+                                    <label>Judul</label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul" name="judul" value="<%=data.get(0).getJudul()%>" required>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Poster</label>
+                                    <label>Poster</label>
                                     <div class="input-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" accept="image/*" id="imgInp">
-                                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                            <img class="" id="blah" src="../../images/<%=data.get(0).getLink_img()%>" alt="your image" />
+                                            <label class="custom-file-label">Choose file</label>
                                         </div>
                                     </div>
                                 </div>
+                                <img class="" id="blah" src="#" style="height: 500px;"/><br><br>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <div class="card-body pad">
@@ -156,8 +145,8 @@
                         </form>
                         <!-- /.card -->
                         <%
-                                }
                             }
+                        }
                         %>
 
                     </div><!-- /.container-fluid -->

@@ -18,7 +18,7 @@
 
             <!-- breadcrumbs -->
             <jsp:include page="contentHeader.jsp" >
-                <jsp:param name="halaman" value="Artikel" />
+                <jsp:param name="halaman" value="Lokasi" />
             </jsp:include>
 
             <!-- Main content -->
@@ -43,46 +43,47 @@
                         <form role="form" action="../../../ArtikelController?data=artikel&proses=input-artikel" method="POST">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label>Judul</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul" name="judul" required>
+                                    <label>Nama PMI/RS</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama PMI/RS" name="namaTempat" required>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
-                                    <label>Poster</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="imgInp" accept="image/*" name="link_img" required>
-                                            <label class="custom-file-label">Choose file</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <img class="" id="blah" src="#" style="height: 500px;"/><br><br>
-                                <!-- /.form-group -->
-                                <div class="form-group">
-                                    <label>Tanggal Kegiatan</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
-                                                </div>
-                                                <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" name="tgl_kegiatan" data-mask>
-                                            </div>
-                                            <!-- /.input group -->
-                                        </div>
-                                    </div>
+                                    <label>Provinsi</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option disabled selected>Pilih Provinsi</option>
+                                        <option>Alaska</option>
+                                        <option>California</option>
+                                        <option>Delaware</option>
+                                        <option>Tennessee</option>
+                                        <option>Texas</option>
+                                        <option>Washington</option>
+                                    </select>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
-                                    <div class="card-body pad">
-                                        <div class="mb-3">
-                                            <textarea class="textarea" placeholder="Place some text here"
-                                                      style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="konten"></textarea>
-                                        </div>
-                                        <p class="text-sm mb-0">
-                                            Editor <a href="https://github.com/bootstrap-wysiwyg/bootstrap3-wysiwyg">Documentation and license information.</a>
-                                        </p>
+                                    <label>Textarea</label>
+                                    <textarea class="form-control" rows="3" placeholder="Enter ..." placeholder="Alamat" name="alamat"></textarea>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Nomor Telepon PMI/RS</label>
+                                    <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Nomor Telepon PMI/RS" name="nomor_tlp" required>
+                                </div>
+                                <label>Email</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                     </div>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label>Status PMI/RS</label>
+                                    <select class="form-control select2" style="width: 100%;">
+                                        <option disabled selected>Pilih Status</option>
+                                        <option value="1">Donor dan Stok Darah</option>
+                                        <option value="2">Donor Darah</option>
+                                        <option value="3">Stok Darah</option>
+                                    </select>
                                 </div>
                                 <!-- /.form-group -->
                             </div>
