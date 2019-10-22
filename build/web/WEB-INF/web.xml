@@ -16,6 +16,10 @@
         <servlet-name>uploadImage</servlet-name>
         <servlet-class>com.application.controller.uploadImage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>lokasiController</servlet-name>
+        <servlet-class>com.application.controller.lokasiController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ArtikelController</servlet-name>
         <url-pattern>/ArtikelController</url-pattern>
@@ -27,6 +31,10 @@
     <servlet-mapping>
         <servlet-name>UserController</servlet-name>
         <url-pattern>/UserController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>lokasiController</servlet-name>
+        <url-pattern>/lokasiController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,7 +19,7 @@ public class ArtikelModel {
 
     // String id, nama, alamat;
     String id_artikel, link_img, judul, konten;
-    private Date tgl_kegiatan = new Date();
+    Date tgl_kegiatan = new Date();
     Koneksi db = null;
 
     public ArtikelModel() {

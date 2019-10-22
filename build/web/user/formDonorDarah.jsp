@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row block-9 justify-content-center mb-5">
             <div class="col-md-8 mb-md-5">
-                <h2 class="text-center">Login</h2>
+                <h2 class="text-center">Formulir Donor Darah</h2>
                 <form action="#" class="bg-light p-5 contact-form">
                     <div class="form-group">
                         <label>No. KTP/SIM</label>
