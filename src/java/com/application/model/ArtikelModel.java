@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 /**
  *
@@ -18,6 +19,7 @@ public class ArtikelModel {
 
     // String id, nama, alamat;
     String id_artikel, link_img, judul, konten;
+    private Date tgl_kegiatan = new Date();
     Koneksi db = null;
 
     public ArtikelModel() {
@@ -45,7 +47,7 @@ public class ArtikelModel {
     }
 
     public void setJudul(String judul) {
-        this.judul = judul;
+        this.judul = judul; 
     }
 
     public String getKonten() {
@@ -54,6 +56,20 @@ public class ArtikelModel {
 
     public void setKonten(String konten) {
         this.konten = konten;
+    }
+
+    /**
+     * @return the tgl_keiagatan
+     */
+    public Date getTgl_kegiatan() {
+        return tgl_kegiatan;
+    }
+
+    /**
+     * @param tgl_keiagatan the tgl_keiagatan to set
+     */
+    public void setTgl_kegiatan(Date tgl_keiagatan) {
+        this.tgl_kegiatan = tgl_keiagatan;
     }
 
     public List tampil() {
@@ -68,6 +84,7 @@ public class ArtikelModel {
                 am.setLink_img(rs.getString("f_link_img"));
                 am.setJudul(rs.getString("f_judul"));
                 am.setKonten(rs.getString("f_konten"));
+                am.setTgl_kegiatan(rs.getDate("f_tgl_kegiatan"));
                 data.add(am);
             }
             db.diskonek(rs);
@@ -78,12 +95,12 @@ public class ArtikelModel {
     }
 
     public void simpan() {
-        String sql = "INSERT INTO t_artikel VALUES (null, '" + link_img + "', '" + judul + "', '" + konten + "')";
+        String sql = "INSERT INTO t_artikel VALUES (null, '" + link_img + "', '" + judul + "', '" + konten + "', '" + tgl_kegiatan + "')";
         db.simpanData(sql);
     }
 
     public void update() {
-        String sql = "UPDATE t_artikel SET f_link_img='" + link_img + "', f_judul='" + judul + "', f_konten='" + konten + "' WHERE f_id_artikel='" + id_artikel + "'";
+        String sql = "UPDATE t_artikel SET f_link_img='" + link_img + "', f_judul='" + judul + "', f_konten='" + konten + "', f_tgl_kegiatan='" + tgl_kegiatan + "' WHERE f_id_artikel='" + id_artikel + "'";
         db.simpanData(sql);
     }
 
@@ -99,6 +116,7 @@ public class ArtikelModel {
                 m.setLink_img(rs.getString("f_link_img"));
                 m.setJudul(rs.getString("f_judul"));
                 m.setKonten(rs.getString("f_konten"));
+                m.setTgl_kegiatan(rs.getDate("f_tgl_kegiatan"));
                 data.add(m);
             }
             db.diskonek(rs);

@@ -12,6 +12,10 @@
         <servlet-name>ArtikelController</servlet-name>
         <servlet-class>com.application.controller.ArtikelController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>uploadImage</servlet-name>
+        <servlet-class>com.application.controller.uploadImage</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ArtikelController</servlet-name>
         <url-pattern>/ArtikelController</url-pattern>
