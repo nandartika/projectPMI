@@ -44,7 +44,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Judul</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Judul" name="judul" required>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Judul" name="judul" required>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
@@ -76,7 +76,7 @@
                                 <div class="form-group">
                                     <div class="card-body pad">
                                         <div class="mb-3">
-                                            <textarea class="textarea" placeholder="Place some text here"
+                                            <textarea class="textarea" placeholder="Masukkan Konten"
                                                       style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="konten"></textarea>
                                         </div>
                                         <p class="text-sm mb-0">

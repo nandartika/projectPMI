@@ -88,7 +88,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                     </div>
-                                    <input type="email" class="form-control" placeholder="Masukka E-mail" name="email">
+                                    <input type="email" class="form-control" placeholder="Masukkan E-mail" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label>Status PMI/RS</label>
