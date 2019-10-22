@@ -27,7 +27,7 @@
                     <!-- SELECT2 EXAMPLE -->
                     <div class="card card-default">
                         <div class="card-header">
-                            <h3 class="card-title">Artikel</h3>
+                            <h3 class="card-title">Lokasi PMI/RS</h3>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -44,41 +44,55 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Nama PMI/RS</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nama PMI/RS" name="namaTempat" required>
+                                    <input type="text" class="form-control" placeholder="Masukkan Nama PMI/RS" name="namaTempat" required>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label>Provinsi</label>
+                                        <select class="form-control select2" style="width: 100%;" name="provinsi">
+                                            <option disabled selected>Pilih Provinsi</option>
+                                            <option value="Alaska">Alaska</option>
+                                            <option>California</option>
+                                            <option>Delaware</option>
+                                            <option>Tennessee</option>
+                                            <option>Texas</option>
+                                            <option>Washington</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label>Kota</label>
+                                        <select class="form-control select2" style="width: 100%;" name="kota">
+                                            <option disabled selected >Pilih Kota</option>
+                                            <option>Alaska</option>
+                                            <option>California</option>
+                                            <option>Delaware</option>
+                                            <option>Tennessee</option>
+                                            <option>Texas</option>
+                                            <option>Washington</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
-                                    <label>Provinsi</label>
-                                    <select class="form-control select2" style="width: 100%;">
-                                        <option disabled selected >Pilih Provinsi</option>
-                                        <option>Alaska</option>
-                                        <option>California</option>
-                                        <option>Delaware</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Washington</option>
-                                    </select>
-                                </div>
-                                <!-- /.form-group -->
-                                <div class="form-group">
-                                    <label>Textarea</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter ..." placeholder="Alamat" name="alamat"></textarea>
+                                    <label>Alamat</label>
+                                    <textarea class="form-control" rows="3" placeholder="Masukkan Alamat" name="alamat"></textarea>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Nomor Telepon PMI/RS</label>
-                                    <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="Nomor Telepon PMI/RS" name="nomor_tlp" required>
+                                    <input type="tel" class="form-control" placeholder="Masukkan Nomor Telepon PMI/RS" name="tlpn" required>
                                 </div>
                                 <label>Email</label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                     </div>
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" class="form-control" placeholder="Masukka E-mail" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label>Status PMI/RS</label>
-                                    <select class="form-control select2" style="width: 100%;">
+                                    <select class="form-control select2" style="width: 100%;" name="status">
                                         <option disabled selected>Pilih Status</option>
                                         <option value="1">Donor dan Stok Darah</option>
                                         <option value="2">Donor Darah</option>
