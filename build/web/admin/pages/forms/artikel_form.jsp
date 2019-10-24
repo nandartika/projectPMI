@@ -51,12 +51,12 @@
                                     <label>Poster</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="imgInp" accept="image/*" name="link_img" required>
+                                            <input type="file" class="custom-file-input" id="imgInp" accept="image/*" name="link_img" required> //ini input gambar
                                             <label class="custom-file-label">Choose file</label>
                                         </div>
                                     </div>
                                 </div>
-                                <img class="" id="blah" src="#" style="height: 500px;"/><br><br>
+                                <img class="" id="blah" src="#" style="height: 500px;"/><br><br> //ini munculin gambar
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                     <label>Tanggal Kegiatan</label>

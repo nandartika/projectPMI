@@ -18,6 +18,47 @@
             <div class="col-md-8 mb-md-5">
                 <h2 class="text-center">Formulir Donor Darah</h2>
                 <form action="#" class="bg-light p-5 contact-form">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Provinsi PMI/RS yang dituju</label>
+                            <select class="form-control" style="width: 100%;">
+                                <option disabled selected>Pilih Provinsi PMI/RS</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Kota PMI/RS yang dituju</label>
+                            <select class="form-control" style="width: 100%;">
+                                <option disabled selected>Pilih Nama PMI/RS</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Nama PMI/RS yang dituju</label>
+                        <select class="form-control" style="width: 100%;">
+                            <option disabled selected>Pilih Nama PMI/RS</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                            <option>Delaware</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+                        </select>
+                    </div>
+                    <br>
+                    <br>
                     <div class="form-group">
                         <label>No. KTP/SIM</label>
                         <input type="text" class="form-control" placeholder="Masukkan No. KTP/SIM" required="required" autofocus>
@@ -33,31 +74,15 @@
                     <div class="row">
                         <div class="form-group col-md-5">
                             <label>Kelurahan</label>
-                            <select class="form-control" style="width: 100%;">
-                                <option disabled selected>Pilih Kelurahan</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            <input type="text" class="form-control" placeholder="Masukkan Kelurahan" required="required">
                         </div>
                         <div class="form-group col-md-5">
                             <label>Kecamatan</label>
-                            <select class="form-control" style="width: 100%;">
-                                <option disabled selected>Pilih Kecamatan</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                            <input type="text" class="form-control" placeholder="Masukkan Kecamatan" required="required">
                         </div>
                         <div class="form-group col-md-2">
                             <label>Kode Pos</label>
-                            <input type="text" class="form-control" placeholder="Masukkan Kode Pos" required="required" autofocus>
+                            <input type="text" class="form-control" placeholder="Masukkan Kode Pos" required="required">
                         </div>
                     </div>
                     <div class="form-group">
