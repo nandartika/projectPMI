@@ -9,31 +9,17 @@
     <div class="wrapper">
 
         <!-- Navbar -->
-        <jsp:include page="../../navbar.jsp"/>
+        <jsp:include page="navbar.jsp"/>
 
         <!-- Main Sidebar Container -->
-        <jsp:include page="../../aside.jsp" >
-            <jsp:param name="isi" value="lain" />
-        </jsp:include>
+        <jsp:include page="aside.jsp"/>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>DataTables</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">DataTables</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div><!-- /.container-fluid -->
-            </section>
+            <jsp:include page="contentHeader.jsp" >
+                <jsp:param name="halaman" value="Artikel" />
+            </jsp:include>
 
             <!-- Main content -->
             <section class="content">
@@ -47,7 +33,7 @@
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <center>
-                                    <a class="tambah" href="../../../ArtikelController?data=artikel&proses=input-artikel">Tambah</a>
+                                    <button type="button" class="btn btn-block btn-primary btn-md col-1" onclick="window.location.href='../../../ArtikelController?data=artikel&proses=input-artikel'">Tambah</button>
                                 </center>
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
@@ -112,13 +98,9 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.0.0-rc.3
-            </div>
-            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-            reserved.
-        </footer>
+
+        <!-- Script -->
+        <jsp:include page="../../footer.jsp"/>
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -127,6 +109,9 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+
+    <!-- Script -->
+    <jsp:include page="script.jsp"/>
 
 </body>
 </html>
