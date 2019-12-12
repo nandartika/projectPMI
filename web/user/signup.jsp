@@ -17,7 +17,7 @@
         <div class="row block-9 justify-content-center mb-5">
             <div class="col-md-8 mb-md-5">
                 <h2 class="text-center">Sign Up</h2>
-                <form action="signupInsert" method="post" class="bg-light p-5 contact-form">
+                <form action="SignupInsert" method="post" class="bg-light p-5 contact-form">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
                         <input type="text" name="nama" class="form-control" placeholder="Nama lengkap" required="required" autofocus>
