@@ -5,7 +5,7 @@
  */
 package com.application.controller;
 
-import com.application.model.lokasiModel;
+import com.application.model.LokasiModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kartika
  */
-public class lokasiController extends HttpServlet {
+public class LokasiController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -68,7 +68,7 @@ public class lokasiController extends HttpServlet {
             response.sendRedirect("admin/pages/forms/lokasi_form.jsp?proses=edit&id_artikel=" + request.getParameter("id_artikel"));
             return;
         } else if (proses.equals("hapus-lokasi")) {
-            lokasiModel hm = new lokasiModel();
+            LokasiModel hm = new LokasiModel();
             hm.setId_lokasi(request.getParameter("id_lokasi"));
             hm.hapus();
             response.sendRedirect("admin/pages/tables/lokasi_table.jsp");
@@ -94,7 +94,7 @@ public class lokasiController extends HttpServlet {
         
         if (data != null) {
             if (data.equals("lokasi")) {
-                lokasiModel am = new lokasiModel();
+                LokasiModel am = new LokasiModel();
                 am.setId_lokasi(request.getParameter("id_lokasi"));
                 am.setNamaTempat(request.getParameter("namaTempat"));
                 am.setProvinsi(request.getParameter("provinsi"));

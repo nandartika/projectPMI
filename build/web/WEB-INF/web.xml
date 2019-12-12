@@ -18,7 +18,7 @@
     </servlet>
     <servlet>
         <servlet-name>lokasiController</servlet-name>
-        <servlet-class>com.application.controller.lokasiController</servlet-class>
+        <servlet-class>com.application.controller.LokasiController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ArtikelController</servlet-name>
