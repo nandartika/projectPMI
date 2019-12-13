@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SignupInsert</servlet-name>
-        <url-pattern>/SignupInsert</url-pattern>
+        <url-pattern>/user/SignupInsert</url-pattern>   <!-- solved: ternyata harus menelusuri foldernya -->
     </servlet-mapping>
     <servlet>
         <servlet-name>UserController</servlet-name>

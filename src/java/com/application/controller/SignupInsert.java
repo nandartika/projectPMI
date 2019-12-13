@@ -1,7 +1,6 @@
 package com.application.controller;
 
 
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -58,7 +57,7 @@ public class SignupInsert extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            theConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/_donordarah&serverTimezone=UTC", "root", "");
+            theConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/_donordarah?serverTimezone=UTC", "root", "");
             Statement theStatement = theConnection.createStatement();
 
             // retrieve the value supplied by the user
@@ -88,25 +87,25 @@ public class SignupInsert extends HttpServlet {
             String insert = "INSERT INTO " + nama_tabel + " " + field_tabel + "VALUES" + values_tabel + ";";
             theStatement.execute( insert );
 
-            ResultSet theResult = theStatement.executeQuery("select * from t_user");   //Select all records from emaillists table.
+            ResultSet theResult = theStatement.executeQuery("SELECT * from t_user");   //Select all records from emaillists table.
 
             while (theResult.next()) //Fetch all the records and print in table
             {
                 out.println();
                 out.println("<TR>");
                 out.println("<TD>" + theResult.getString("f_nama_user") + "</TD>");
-                out.println("<TD>" + theResult.getString("f_nik") + "</TD>");
+                out.println("<TD>" + theResult.getString("f_nik")       + "</TD>");
                 out.println("<TD>" + theResult.getString("f_golongan_darah") + "</TD>");
-                out.println("<TD>" + theResult.getString("f_email") + "</TD>");
-                out.println("<TD>" + theResult.getString("f_password") + "</TD>");
+                out.println("<TD>" + theResult.getString("f_email")     + "</TD>");
+                out.println("<TD>" + theResult.getString("f_password")  + "</TD>");
                 out.println("<TD>" + theResult.getString("f_tgl_lahir") + "</TD>");
-                out.println("<TD>" + theResult.getString("f_jkelamin") + "</TD>");
+                out.println("<TD>" + theResult.getString("f_jkelamin")  + "</TD>");
                 out.println("<TD>" + theResult.getString("f_pekerjaan") + "</TD>");
-                out.println("<TD>" + theResult.getString("f_nomor_hp") + "</TD>");
-                out.println("<TD>" + theResult.getString("f_alamat") + "</TD>");
+                out.println("<TD>" + theResult.getString("f_nomor_hp")  + "</TD>");
+                out.println("<TD>" + theResult.getString("f_alamat")    + "</TD>");
                 out.println("</TR>");
             }
-            theResult.close();  //Close the result set
+            theResult.close();      //Close the result set
             theStatement.close();   //Close statement
             theConnection.close();  //Close database Connection
         } catch (Exception e) {
