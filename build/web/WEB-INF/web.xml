@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>signupInsert</servlet-name>
-        <servlet-class>signupInsert</servlet-class>
+        <servlet-name>SignupInsert</servlet-name>
+        <servlet-class>com.application.controller.SignupInsert</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupInsert</servlet-name>
+        <url-pattern>/user/SignupInsert</url-pattern>   <!-- solved: ternyata harus menelusuri foldernya -->
+    </servlet-mapping>
     <servlet>
         <servlet-name>UserController</servlet-name>
-        <servlet-class>com.PMI.controller.SignupController</servlet-class>
+        <servlet-class>com.application.controller.SignupController</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/UserController</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>ArtikelController</servlet-name>
         <servlet-class>com.application.controller.ArtikelController</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>uploadImage</servlet-name>
-        <servlet-class>com.application.controller.uploadImage</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>lokasiController</servlet-name>
-        <servlet-class>com.application.controller.lokasiController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ArtikelController</servlet-name>
         <url-pattern>/ArtikelController</url-pattern>
     </servlet-mapping>
+    <!--
+    <servlet>
+        <servlet-name>UploadImage</servlet-name>
+        <servlet-class>com.application.controller.uploadImage</servlet-class>
+    </servlet>-->
+    <servlet>
+        <servlet-name>LokasiController</servlet-name>
+        <servlet-class>com.application.controller.LokasiController</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>signupInsert</servlet-name>
-        <url-pattern>/signupInsert</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UserController</servlet-name>
-        <url-pattern>/UserController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>lokasiController</servlet-name>
-        <url-pattern>/lokasiController</url-pattern>
+        <servlet-name>LokasiController</servlet-name>
+        <url-pattern>/LokasiController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

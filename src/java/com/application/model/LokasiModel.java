@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author kartika
  */
-public class lokasiModel {
+public class LokasiModel {
 
     String id_lokasi, namaTempat, provinsi, kota, alamat, tlpn, email;
     int status;
@@ -133,13 +133,13 @@ public class lokasiModel {
     }
 
     public List tampil() {
-        List<lokasiModel> data = new ArrayList<lokasiModel>();
+        List<LokasiModel> data = new ArrayList<LokasiModel>();
         ResultSet rs = null;
         try {
             String sql = "SELECT * FROM t_lokasi ORDER BY f_id_lokasi";
             rs = db.ambilData(sql);
             while (rs.next()) {
-                lokasiModel am = new lokasiModel();
+                LokasiModel am = new LokasiModel();
                 am.setId_lokasi(rs.getString("f_id_lokasi"));
                 am.setNamaTempat(rs.getString("f_nama_tempat"));
                 am.setProvinsi(rs.getString("f_provinsi"));
@@ -168,13 +168,13 @@ public class lokasiModel {
     }
 
     public List cariID() {
-        List<lokasiModel> data = new ArrayList<lokasiModel>();
+        List<LokasiModel> data = new ArrayList<LokasiModel>();
         ResultSet rs = null;
         try {
             String sql = "SELECT * FROM t_lokasi WHERE f_id_lokasi='" + id_lokasi + "'";
             rs = db.ambilData(sql);
             while (rs.next()) {
-                lokasiModel m = new lokasiModel();
+                LokasiModel m = new LokasiModel();
                 m.setId_lokasi(rs.getString("f_id_lokasi"));
                 m.setNamaTempat(rs.getString("f_nama_tempat"));
                 m.setProvinsi(rs.getString("f_provinsi"));
